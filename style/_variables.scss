@@ -1,0 +1,34 @@
+﻿/*variables*/
+$font-size: 0.875em;
+/*14px*/
+
+/*color variables*/
+/*primary*/
+$main-background: hsl(218, 28%, 13%);
+$footer-background: hsl(216, 53%, 9%);
+$testimonials-background: hsl(219, 30%, 18%);
+$intro-email-background: hsl(217, 28%, 15%);
+
+/*accents*/
+
+$call-action-cyan: hsl(176, 68%, 64%);
+$call-action-blue: hsl(198, 60%, 50%);
+$error-light-red: hsl(0, 100%, 63%);
+$succes-light-green: hsl(125, 17%, 58%);
+
+/*neutral*/
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-text-color: hsl(0, 0%, 83%);
+$placeholder-gray: lightgray;
+
+/*widths*/
+$desktop-max-width: 1440px;
+$mobile-max-width: 375px;
+$max-width: 100vw;
+$mobile-width: 340px;
+
+/*border shadow*/
+$border-shadow: 5px 5px 16px 3px rgba(0, 0, 0, 0.5);
+
+/*cursor*/
+$cursor-on-hover: pointer;

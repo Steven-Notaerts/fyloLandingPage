@@ -1,0 +1,748 @@
+﻿/*imports*/
+//Headings, Call-to-actions, Header Navigation font
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/*font-family: 'Raleway', sans-serif;*/
+//body font
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/*font-family: 'Open Sans', sans-serif;*/
+@import "./_variables";
+@import "./_mixins";
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+/*notatie reset*/
+html {
+  box-sizing: border-box;
+  background-color: $main-background;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*body*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: $font-size;
+  background-color: $main-background;
+  max-width: $desktop-max-width;
+  overflow-x: hidden;
+}
+
+/*header and logo*/
+.header {
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  background-color: $intro-email-background;
+  width: $max-width;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $desktop-max-width;
+  }
+}
+
+/*header navigation*/
+.navigation {
+  display: flex;
+  &__item {
+    text-decoration: none;
+    color: $neutral-white;
+    margin-left: 4rem;
+    letter-spacing: 0.8px;
+  }
+  //item on hover
+  &__item:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: $cursor-on-hover;
+  }
+}
+
+/*main*/
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $max-width;
+}
+
+/*intro*/
+.intro {
+  display: flex;
+  justify-content: center;
+  background-image: url("/assets/image/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  max-width: $max-width;
+  background-color: $intro-email-background;
+  /*intro container*/
+  &__container {
+    height: 120vh;
+    text-align: center;
+  }
+  /*intro image*/
+  &__image {
+    width: 750px;
+    height: auto;
+  }
+  /*intro title*/
+  &__title {
+    @include title();
+    margin: 1em;
+  }
+  /*intro text*/
+  &__text {
+    color: $neutral-text-color;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    word-spacing: 1px;
+  }
+  /*intro get started button*/
+  &__get-started-btn {
+    @include button();
+    margin: 2em;
+    width: 300px;
+    /*intro get started button hover*/
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+/*features section */
+.features {
+  display: flex;
+  justify-content: center;
+  /*features container */
+  &__container {
+    background-color: $main-background;
+    width: $desktop-max-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /*features feature */
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    text-align: center;
+    margin: 2em;
+  }
+  /*feature icon */
+  &__icon {
+    height: 90px;
+    width: 100px;
+    margin: 4em auto;
+  }
+  /*feature subtitle */
+  &__subtitle {
+    color: $neutral-white;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  /*feature description */
+  &__description {
+    color: $neutral-text-color;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    padding: 1.8em;
+  }
+}
+
+/*productive section*/
+
+.stay-productive {
+  display: flex;
+  justify-content: center;
+  background-color: $main-background;
+  margin-top: 5em;
+
+  /*stay productive container*/
+  &__container {
+    width: $desktop-max-width;
+    display: flex;
+    flex-direction: row;
+  }
+  /*stay productive image*/
+  &__image {
+    width: 50%;
+    height: auto;
+    margin: 0 4em 0 2em;
+  }
+  /*stay sub productive*/
+  &__sub-container {
+    width: 50%;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  /*stay productive title*/
+  &__title {
+    @include title();
+    margin-bottom: 1em;
+  }
+  /*stay productive text*/
+  &__text {
+    color: $neutral-text-color;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    margin-right: 6em;
+  }
+  /*stay productive information link*/
+  &__information-link {
+    color: $call-action-cyan;
+    text-decoration: none;
+    border-bottom: 1px solid $call-action-cyan;
+    padding-bottom: 0.7em;
+    margin-top: 1.6em;
+    /*stay productive information link on hover*/
+    &:hover {
+      color: $neutral-white;
+      border-bottom: 1px solid $neutral-white;
+    }
+  }
+}
+
+/*testimonials*/
+.testimonials {
+  margin-top: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*testimonials big quotes*/
+  &__big-quotes {
+    height: 60px;
+    width: 60px;
+    margin-left: -85em;
+    position: absolute;
+    bottom: 73%;
+  }
+  /*testimonials container*/
+  &__container {
+    width: $desktop-max-width;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 100;
+    margin-top: 2em;
+    padding: 2em 4em;
+  }
+  /*testimonials single testimonial*/
+  &__testimonial {
+    background-color: $testimonials-background;
+    padding: 2.5em 2.5em 2em 2em;
+    box-shadow: $border-shadow;
+    width: 370px;
+    margin: 1em;
+  }
+  /*testimonials singele testimonial text*/
+  &__text {
+    color: $neutral-text-color;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+  }
+  /*testimonials singele testimonial person container*/
+  &__person {
+    display: flex;
+  }
+  /*testimonials singele testimonial person image*/
+  &__person-img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 1em;
+  }
+  /*testimonials singele testimonial peson id*/
+  &__person-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $neutral-white;
+    margin-left: 0.8em;
+    line-height: 1.4;
+  }
+  /*testimonials singele testimonial person name*/
+  &__person-name {
+    font-weight: 700;
+  }
+  /*testimonials singele testimonial person job*/
+  &__person-job {
+    font-size: 0.9em;
+    color: $neutral-text-color;
+  }
+}
+/*get access section*/
+.get-access {
+  display: flex;
+  justify-content: center;
+  margin-top: 15em;
+  margin-bottom: -10em;
+  max-width: $max-width;
+  /*get access container*/
+  &__container {
+    z-index: 100;
+    width: $desktop-max-width;
+    background-color: $intro-email-background;
+    width: 50%;
+    box-shadow: $border-shadow;
+    color: $neutral-white;
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+    text-align: center;
+    padding: 2em;
+    border-radius: 15px;
+    height: 35vh;
+  }
+
+  /*get access title*/
+  &__title {
+    @include title();
+  }
+
+  /*get access text*/
+  &__text {
+    color: $neutral-text-color;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 3em 6em;
+  }
+  /*get access email*/
+  &__email {
+    border-radius: 25px;
+    width: 500px;
+    height: 3em;
+    border: none;
+    margin-right: 1em;
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    padding: 1em 2em;
+    /*get access email placeholder*/
+    &::placeholder {
+      color: $placeholder-gray;
+    }
+  }
+  /*get access submit button*/
+  &__btn-submit {
+    @include button();
+    width: 270px;
+
+    /*get access submit button on ohver*/
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+/*footer*/
+
+.footer {
+  height: 50vh;
+  width: $max-width;
+  background-color: $footer-background;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  /*footer container*/
+  &__container {
+    padding: 15em 5em;
+    color: $neutral-text-color;
+    width: $desktop-max-width;
+  }
+  /*footer sub container*/
+  &__sub-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  /*footer location*/
+  &__location {
+    display: flex;
+    margin: 2em 0;
+    width: 25em;
+  }
+  /*footer location text*/
+  &__location-text {
+    margin-left: 1em;
+    line-height: 1.6;
+  }
+  /*footer contact details container*/
+  &__contact-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+  }
+  /*footer contact details contact*/
+  &__contact {
+    display: flex;
+  }
+  /*footer contact details contact item*/
+  &__contact-item {
+    margin: 0.5rem;
+  }
+  /*footer links*/
+  &__links {
+    padding-top: 1em;
+  }
+  /*footer social media*/
+  &__social-media {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    font-size: 1.4em;
+  }
+  /*footer social media link*/
+  &__link {
+    text-decoration: none;
+    margin: 0.3em 1em 1em 0;
+    color: $neutral-text-color;
+
+    /*footer social media link on hover*/
+    &:hover {
+      font-weight: 700;
+      color: $neutral-white;
+    }
+  }
+}
+/*when error on submit email adress */
+.error {
+  color: $error-light-red;
+  margin-left: -58%;
+  margin-top: 0.4em;
+}
+/*when succes on submit email adress */
+.succes {
+  color: $succes-light-green;
+  margin-left: -66%;
+  margin-top: 0.4em;
+}
+/*hidden classlist on error/succes element */
+.hidden {
+  display: none;
+}
+
+/*media queries mobile: width = 375px*/
+@media all and(max-width: $mobile-max-width) {
+  /*media querie on html*/
+  html {
+    width: $mobile-max-width;
+    overflow-x: hidden;
+  }
+  /*media querie on body*/
+  body {
+    width: $mobile-max-width;
+    display: flex;
+    flex-direction: column;
+  }
+  /*media querie header*/
+  .header {
+    width: $mobile-max-width;
+    /*media querie header container*/
+    &__container {
+      width: $mobile-width;
+    }
+    /*media querie header logo image*/
+    &__logo-image {
+      height: 30px;
+      width: auto;
+    }
+  }
+  /*media querie navigation*/
+  .navigation {
+    /*media querie navigation item*/
+    &__item {
+      color: $neutral-white;
+      margin-left: 1em;
+    }
+  }
+  /*media querie main*/
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $mobile-max-width;
+  }
+  /*media querie intro*/
+  .intro {
+    width: $mobile-max-width;
+    background-image: url("/assets/image/bg-curvy-mobile.svg");
+    background-position: bottom;
+    /*media querie intro container*/
+    &__container {
+      width: $mobile-width;
+      height: 80vh;
+    }
+    /*media querie intro image*/
+    &__image {
+      width: 300px;
+      height: auto;
+    }
+    /*media querie intro title*/
+    &__title {
+      font-size: 1.6em;
+      margin: 1em 0;
+    }
+    /*media querie intro text*/
+    &__text {
+      font-size: 0.9em;
+      margin: 1em;
+    }
+    /*media querie get started button*/
+    &__get-started-btn {
+      width: 200px;
+    }
+  }
+  /*media querie feature section*/
+  .features {
+    width: $mobile-max-width;
+    /*media querie feature container*/
+    &__container {
+      width: $mobile-width;
+    }
+    /*media querie feature icon*/
+    &__icon {
+      height: 60px;
+      width: 80px;
+    }
+    /*media querie feature subtitle*/
+    &__subtitle {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    /*media querie feature description*/
+    &__description {
+      font-size: 0.9em;
+      padding: 0;
+      width: $mobile-width;
+    }
+  }
+
+  /*media querie stay productive section*/
+  .stay-productive {
+    width: $mobile-max-width;
+    /*media querie stay productive container*/
+    &__container {
+      width: $mobile-width;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    /*media querie stay productive image*/
+    &__image {
+      width: 90%;
+    }
+    /*media querie stay productive sub container*/
+    &__sub-container {
+      width: $mobile-width;
+    }
+    /*media querie stay productive sub container title*/
+    &__title {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    /*media querie stay productive sub container title span*/
+    &__title-span {
+      margin-right: 0.2em;
+    }
+
+    /*media querie stay productive text*/
+    &__text {
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      margin-bottom: 1em;
+      margin-right: 1em;
+    }
+  }
+
+  /*media querie testimonials*/
+  .testimonials {
+    width: $mobile-max-width;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    /*media querie big quotes*/
+    &__big-quotes {
+      position: relative;
+      margin-left: -18.5em;
+      margin-bottom: -4.3em;
+      height: 25px;
+      width: 30px;
+    }
+    /*media querie container*/
+    &__container {
+      width: $mobile-width;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+    }
+    /*media querie testimonials testimonial*/
+    &__testimonial {
+      width: 300px;
+      padding: 2em 1.5em 2em 1.5em;
+      line-height: 1.8;
+    }
+    /*media querie testimonials testimonial text*/
+    &__text {
+      color: $neutral-text-color;
+      line-height: 1.8;
+      font-size: 0.9em;
+      letter-spacing: 0;
+    }
+    /*media querie testimonials testimonial person image*/
+    &__person-img {
+      width: 25px;
+      height: 25px;
+      margin-top: 0.1em;
+    }
+    /*media querie testimonials testimonial person id*/
+    &__person-id {
+      font-size: 0.9em;
+    }
+    /*media querie testimonials testimonial person job title*/
+    &__person-job {
+      margin-top: 0.4em;
+    }
+  }
+
+  /*media querie get access*/
+  .get-access {
+    margin-top: 10em;
+    margin-bottom: -5em;
+    /*media querie get access container*/
+    &__container {
+      width: 90%;
+      height: 50vh;
+      padding: 2em 1.2em;
+      align-items: center;
+    }
+    /*media querie get access title*/
+    &__title {
+      font-size: 1.4em;
+    }
+    /*media querie get access text*/
+    &__text {
+      font-size: 1.1em;
+      margin: 1em 0;
+      letter-spacing: 0;
+    }
+    /*media querie get access email input*/
+    &__email {
+      width: 90%;
+      margin: 2em 0;
+      &::placeholder {
+        font-size: 0.9em;
+      }
+    }
+    /*media querie get access submit button*/
+    &__btn-submit {
+      width: 90%;
+    }
+  }
+  /*media querie footer*/
+  .footer {
+    width: $mobile-max-width;
+    height: auto;
+    flex-direction: column;
+    /*media querie footer logo image*/
+    &__logo-image {
+      width: 215px;
+      margin-left: 2.3em;
+      height: auto;
+    }
+    /*media querie footer container*/
+    &__container {
+      padding: 10em 0 0 0;
+      display: flex;
+      flex-direction: column;
+      width: $mobile-width;
+    }
+
+    /*media querie footer sub container*/
+    &__sub-container {
+      width: $mobile-max-width;
+      padding: 2em;
+      flex-direction: column;
+    }
+    /*media querie footer location*/
+    &__location {
+      margin: 1em 0;
+    }
+    /*media querie footer location icon*/
+    &__location-icon {
+      margin-top: 0.2em;
+    }
+    /*media querie footer location text*/
+    &__location-text {
+      padding-right: 5em;
+      margin-left: 2em;
+    }
+    /*media querie footer contact details*/
+    &__contact-details {
+      margin: 0;
+    }
+    /*media querie footer contact item*/
+    &__contact-item {
+      margin: 1em 1.5em 1em 0;
+    }
+    /*media querie footer links*/
+    &__link {
+      margin-top: 1.6em;
+    }
+    /*media querie footer social links*/
+    &__social-media {
+      justify-content: center;
+      margin-top: 4em;
+    }
+  }
+  /*when error on submit email adress */
+  .error {
+    color: $error-light-red;
+    margin-left: 0;
+    margin-top: 0.8em;
+  }
+  /*when succes on submit email adress */
+  .succes {
+    color: $succes-light-green;
+    margin-left: 0;
+    margin-top: 0.8em;
+  }
+}
+
+/*screen reader only*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
