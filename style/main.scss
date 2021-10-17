@@ -33,9 +33,9 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  height: 20vh;
+  min-height: 10rem;
   background-color: $intro-email-background;
-  width: $max-width;
+  min-width: $max-width;
 
   &__container {
     display: flex;
@@ -47,7 +47,9 @@ body {
 
 /*header navigation*/
 .navigation {
-  display: flex;
+  &__list {
+    display: flex;
+  }
   &__item {
     text-decoration: none;
     color: $neutral-white;
@@ -233,7 +235,7 @@ body {
   &__big-quotes {
     height: 60px;
     width: 60px;
-    margin-left: -85em;
+    margin-left: -75rem;
     position: absolute;
     bottom: 73%;
   }
@@ -404,9 +406,24 @@ body {
     margin: 0.5rem;
   }
   /*footer links*/
-  &__links {
+
+  &__link-list {
     padding-top: 1em;
+    height: auto;
+    column-count: 2;
   }
+  &__link {
+    text-decoration: none;
+    margin: 0.3em 1em 1em 0;
+    color: $neutral-text-color;
+
+    /*footer social media link on hover*/
+    &:hover {
+      font-weight: 700;
+      color: $neutral-white;
+    }
+  }
+
   /*footer social media*/
   &__social-media {
     display: flex;
@@ -415,12 +432,10 @@ body {
     font-size: 1.4em;
   }
   /*footer social media link*/
-  &__link {
+  &__social-media-link {
     text-decoration: none;
     margin: 0.3em 1em 1em 0;
     color: $neutral-text-color;
-
-    /*footer social media link on hover*/
     &:hover {
       font-weight: 700;
       color: $neutral-white;
@@ -463,6 +478,7 @@ body {
     /*media querie header container*/
     &__container {
       width: $mobile-width;
+      padding: 1rem;
     }
     /*media querie header logo image*/
     &__logo-image {
@@ -589,7 +605,7 @@ body {
     /*media querie big quotes*/
     &__big-quotes {
       position: relative;
-      margin-left: -18.5em;
+      margin-left: -20em;
       margin-bottom: -4.3em;
       height: 25px;
       width: 30px;
@@ -710,6 +726,10 @@ body {
     /*media querie footer contact item*/
     &__contact-item {
       margin: 1em 1.5em 1em 0;
+    }
+    /**/
+    &__link-list {
+      column-count: 1;
     }
     /*media querie footer links*/
     &__link {

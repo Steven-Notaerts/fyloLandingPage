@@ -38,27 +38,22 @@
         <img
           class="header__logo-image"
           src="./assets/image/logo.svg"
-          alt="3 stack squares and Fylo as logo name"
+          alt="Fylo logo"
+          aria-hidden="true"
         />
-
-        <ul class="navigation">
-          <li>
-            <a href="#features" class="navigation__item" aria-label="features"
-              >Features</a
-            >
-          </li>
-          <li>
-            <a href="#team" class="navigation__item" aria-label="team">Team</a>
-          </li>
-          <li>
-            <a
-              href="#get-access"
-              class="navigation__item"
-              aria-label="get-acces"
-              >Sign in</a
-            >
-          </li>
-        </ul>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li>
+              <a href="#features" class="navigation__item">Features</a>
+            </li>
+            <li>
+              <a href="#team" class="navigation__item">Team</a>
+            </li>
+            <li>
+              <a href="#get-access" class="navigation__item">Sign in</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <!-- end header section-->
@@ -69,7 +64,8 @@
         <div class="intro__container">
           <img
             src="./assets/image/illustration-intro.png"
-            alt=""
+            aria-hidden="true"
+            alt="Office workers are trying to order all files in one folder"
             class="intro__image"
           />
           <h1 class="intro__title">
@@ -96,10 +92,12 @@
         <div class="features__container">
           <!-- Feature acces anywhere -->
           <div class="features__feature">
+            <!-- no alt , img are decorative -->
             <img
               src="./assets/icons/icon-access-anywhere.svg"
-              alt="computer screen and smartphone"
+              alt=""
               class="features__icon"
+              aria-hidden="true"
             />
             <h2 class="features__subtitle">Access your files, anywhere</h2>
             <p class="features__description">
@@ -109,10 +107,12 @@
           </div>
           <!-- Feature security -->
           <div class="features__feature">
+            <!-- no alt , img are decorative -->
             <img
               src="./assets/icons/icon-security.svg"
-              alt="guard protection shield"
+              alt=""
               class="features__icon"
+              aria-hidden="true"
             />
             <h3 class="features__subtitle">Security you can trust</h3>
             <p class="features__description">
@@ -122,10 +122,12 @@
           </div>
           <!-- Feature collaborations -->
           <div class="features__feature">
+            <!-- no alt , img are decorative -->
             <img
               src="./assets/icons/icon-collaboration.svg"
-              alt="clock to display the real time collaboration"
+              alt=""
               class="features__icon"
+              aria-hidden="true"
             />
             <h3 class="features__subtitle">Real-time collaboration</h3>
             <p class="features__description">
@@ -135,10 +137,12 @@
           </div>
           <!-- Feature any system file -->
           <div class="features__feature">
+            <!-- no alt , img are decorative -->
             <img
               src="./assets/icons/icon-any-file.svg"
-              alt="any type of starage in folders"
+              alt=""
               class="features__icon"
+              aria-hidden="true"
             />
             <h3 class="features__subtitle">Store any type of file</h3>
             <p class="features__description">
@@ -159,6 +163,7 @@
             src="./assets/image/illustration-stay-productive.png"
             alt="employees are checking if they are productive"
             class="stay-productive__image"
+            aria-hidden="true"
           />
           <!-- stay productive sub container -->
           <div class="stay-productive__sub-container">
@@ -185,16 +190,17 @@
       </section>
       <!-- testimonials section -->
       <section class="testimonials">
+        <h2 class="testimonials__title sr-only">Testimonials</h2>
         <img
           src="./assets/image/bg-quotes.png"
           class="testimonials__big-quotes"
-          alt=""
+          alt="Big quotes"
+          aria-hidden="true"
         />
         <!-- stay testimonials container -->
         <div class="testimonials__container">
-          <!-- testimonial one -->>
+          <!-- testimonial one -->
           <div class="testimonials__testimonial">
-            <h2 class="testimonials__title sr-only">Testimonials</h2>
             <p class="testimonials__text">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -203,11 +209,12 @@
             <div class="testimonials__person">
               <img
                 src="./assets/image/profile-1.jpg"
-                alt="photo of Satish Patel"
+                alt="Satish Patel"
                 class="testimonials__person-img"
+                aria-hidden="true"
               />
               <div class="testimonials__person-id">
-                <span class="testimonials__person-name">Satish Patel</span>
+                <h4 class="testimonials__person-name">Satish Patel</h4>
                 <span class="testimonials__person-job"
                   >Founder & CEO, Huddle</span
                 >
@@ -224,11 +231,12 @@
             <div class="testimonials__person">
               <img
                 src="./assets/image/profile-2.jpg"
-                alt="photo of Bruce McKenzie"
+                alt="Bruce McKenzie"
                 class="testimonials__person-img"
+                aria-hidden="true"
               />
               <div class="testimonials__person-id">
-                <span class="testimonials__person-name">Bruce McKenzie</span>
+                <h4 class="testimonials__person-name">Bruce McKenzie</h4>
                 <span class="testimonials__person-job"
                   >Founder & CEO, Huddle</span
                 >
@@ -245,11 +253,12 @@
             <div class="testimonials__person">
               <img
                 src="./assets/image/profile-3.jpg"
-                alt="photo of Iva Boyd"
+                alt="Iva Boyd"
                 class="testimonials__person-img"
+                aria-hidden="true"
               />
               <div class="testimonials__person-id">
-                <span class="testimonials__person-name">Iva Boyd</span>
+                <h4 class="testimonials__person-name">Iva Boyd</h4>
                 <span class="testimonials__person-job"
                   >Founder & CEO, Huddle</span
                 >
@@ -270,11 +279,14 @@
           </p>
           <!-- get access form -->
           <form class="get-access__email-container">
-            <input
-              type="email"
-              placeholder="email@example.com"
-              class="get-access__email"
-            />
+            <label for="get-acces__email">
+              <input
+                type="email"
+                placeholder="email@example.com"
+                class="get-access__email"
+              />
+            </label>
+
             <button class="get-access__btn-submit">Get Started For Free</button>
           </form>
           <span class="error hidden">Please enter a valid email adress</span>
@@ -291,7 +303,8 @@
         <img
           class="footer__logo-image"
           src="./assets/image/logo.svg"
-          alt="3 stack squares and Fylo as logo name"
+          alt="Fylo logo"
+          aria-hidden="true"
         />
         <!-- Footer sub container -->
         <div class="footer__sub-container">
@@ -315,7 +328,8 @@
             </li>
           </ul>
           <!-- links list one -->
-          <ul class="footer__links">
+          <nav class="footer__links">
+          <ul class="footer__link-list">
             <li class="footer__link">
               <a
                 href="#"
@@ -351,10 +365,7 @@
                 aria-label="Footer-link"
                 >Blog</a
               >
-            </li>
-          </ul>
-          <!-- links list two -->
-          <ul class="footer__links">
+            </li>          
             <li class="footer__link">
               <a
                 href="#"
@@ -383,6 +394,7 @@
               >
             </li>
           </ul>
+        </nav>
           <!--social media links-->
           <ul class="footer__social-media">
             <li>
@@ -390,7 +402,7 @@
                 href="https://www.facebook.com/"
                 rel="noopener noreferrer"
                 target="_blank"
-                class="footer__link"
+                class="footer__social-media-link"
                 aria-label="Facebook"
               >
                 <i class="fab fa-facebook"></i>
@@ -401,7 +413,7 @@
                 href="https://twitter.com/"
                 rel="noopener noreferrer"
                 target="_blank"
-                class="footer__link"
+                class="footer__social-media-link"
                 aria-label="Twitter"
               >
                 <i class="fab fa-twitter"></i>
@@ -412,7 +424,7 @@
                 href="https://www.instagram.com/"
                 rel="noopener noreferrer"
                 target="_blank"
-                class="footer__link"
+                class="footer__social-media-link"
                 aria-label="Instagram"
               >
                 <i class="fab fa-instagram"></i>

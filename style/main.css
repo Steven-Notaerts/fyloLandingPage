@@ -47,9 +47,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 20vh;
+  min-height: 10rem;
   background-color: #1c2431;
-  width: 100vw;
+  min-width: 100vw;
 }
 
 .header__container {
@@ -66,7 +66,7 @@ body {
 }
 
 /*header navigation*/
-.navigation {
+.navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +108,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("/assets/image/bg-curvy-desktop.svg");
+  background-image: url("../assets/image/bg-curvy-desktop.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -372,7 +372,7 @@ body {
 .testimonials__big-quotes {
   height: 60px;
   width: 60px;
-  margin-left: -85em;
+  margin-left: -75rem;
   position: absolute;
   bottom: 73%;
 }
@@ -631,8 +631,23 @@ body {
   margin: 0.5rem;
 }
 
-.footer__links {
+.footer__link-list {
   padding-top: 1em;
+  height: auto;
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.footer__link {
+  text-decoration: none;
+  margin: 0.3em 1em 1em 0;
+  color: #d4d4d4;
+  /*footer social media link on hover*/
+}
+
+.footer__link:hover {
+  font-weight: 700;
+  color: white;
 }
 
 .footer__social-media {
@@ -647,14 +662,13 @@ body {
   font-size: 1.4em;
 }
 
-.footer__link {
+.footer__social-media-link {
   text-decoration: none;
   margin: 0.3em 1em 1em 0;
   color: #d4d4d4;
-  /*footer social media link on hover*/
 }
 
-.footer__link:hover {
+.footer__social-media-link:hover {
   font-weight: 700;
   color: white;
 }
@@ -704,6 +718,7 @@ body {
   }
   .header__container {
     width: 340px;
+    padding: 1rem;
   }
   .header__logo-image {
     height: 30px;
@@ -734,7 +749,7 @@ body {
   /*media querie intro*/
   .intro {
     width: 375px;
-    background-image: url("/assets/image/bg-curvy-mobile.svg");
+    background-image: url("../assets/image/bg-curvy-mobile.svg");
     background-position: bottom;
     /*media querie intro container*/
     /*media querie intro image*/
@@ -858,7 +873,7 @@ body {
   }
   .testimonials__big-quotes {
     position: relative;
-    margin-left: -18.5em;
+    margin-left: -20em;
     margin-bottom: -4.3em;
     height: 25px;
     width: 30px;
@@ -960,6 +975,7 @@ body {
     /*media querie footer location text*/
     /*media querie footer contact details*/
     /*media querie footer contact item*/
+    /**/
     /*media querie footer links*/
     /*media querie footer social links*/
   }
@@ -1002,6 +1018,10 @@ body {
   }
   .footer__contact-item {
     margin: 1em 1.5em 1em 0;
+  }
+  .footer__link-list {
+    -webkit-column-count: 1;
+            column-count: 1;
   }
   .footer__link {
     margin-top: 1.6em;
