@@ -13,6 +13,10 @@
 html {
   box-sizing: border-box;
   background-color: $main-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 *,
 *:before,
@@ -25,7 +29,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: $font-size;
   background-color: $main-background;
-  max-width: $desktop-max-width;
+  min-width: $max-width;
   overflow-x: hidden;
 }
 
@@ -35,9 +39,10 @@ body {
   justify-content: center;
   min-height: 10rem;
   background-color: $intro-email-background;
-  min-width: $max-width;
+  max-width: $max-width;
 
   &__container {
+    padding: 0 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,7 +89,7 @@ body {
   background-color: $intro-email-background;
   /*intro container*/
   &__container {
-    height: 120vh;
+    height: 65rem;
     text-align: center;
   }
   /*intro image*/
@@ -316,7 +321,7 @@ body {
     text-align: center;
     padding: 2em;
     border-radius: 15px;
-    height: 35vh;
+    height: 20rem;
   }
 
   /*get access title*/
@@ -363,7 +368,7 @@ body {
 /*footer*/
 
 .footer {
-  height: 50vh;
+  height: 30rem;
   width: $max-width;
   background-color: $footer-background;
   bottom: 0;
@@ -408,7 +413,7 @@ body {
   /*footer links*/
 
   &__link-list {
-    padding-top: 1em;
+    padding: 1em 0;
     height: auto;
     column-count: 2;
   }
@@ -463,12 +468,12 @@ body {
 @media all and(max-width: $mobile-max-width) {
   /*media querie on html*/
   html {
-    width: $mobile-max-width;
+    max-width: $mobile-max-width;
     overflow-x: hidden;
   }
   /*media querie on body*/
   body {
-    width: $mobile-max-width;
+    max-width: $mobile-max-width;
     display: flex;
     flex-direction: column;
   }
@@ -477,7 +482,7 @@ body {
     width: $mobile-max-width;
     /*media querie header container*/
     &__container {
-      width: $mobile-width;
+      max-width: $mobile-width;
       padding: 1rem;
     }
     /*media querie header logo image*/
@@ -509,7 +514,7 @@ body {
     /*media querie intro container*/
     &__container {
       width: $mobile-width;
-      height: 80vh;
+      height: 35rem;
     }
     /*media querie intro image*/
     &__image {
@@ -654,7 +659,7 @@ body {
     /*media querie get access container*/
     &__container {
       width: 90%;
-      height: 50vh;
+      height: 25rem;
       padding: 2em 1.2em;
       align-items: center;
     }
@@ -737,7 +742,8 @@ body {
     }
     /*media querie footer social links*/
     &__social-media {
-      justify-content: center;
+      justify-content: space-between;
+      padding: 0 3em;
       margin-top: 4em;
     }
   }
