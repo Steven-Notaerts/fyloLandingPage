@@ -706,15 +706,14 @@ body {
 }
 
 /*media queries mobile: width = 375px*/
-@media all and (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 1200px) {
   /*media querie on html*/
   html {
-    max-width: 375px;
     overflow-x: hidden;
   }
   /*media querie on body*/
   body {
-    max-width: 375px;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -725,12 +724,12 @@ body {
   }
   /*media querie header*/
   .header {
-    width: 375px;
+    max-width: 100%;
     /*media querie header container*/
     /*media querie header logo image*/
   }
   .header__container {
-    max-width: 90%;
+    max-width: 100%;
     padding: 1rem;
   }
   .header__logo-image {
@@ -757,11 +756,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 375px;
+    max-width: 100%;
   }
   /*media querie intro*/
   .intro {
-    width: 375px;
+    max-width: 100%;
     background-image: url("../assets/image/bg-curvy-mobile.svg");
     background-position: bottom;
     /*media querie intro container*/
@@ -771,7 +770,7 @@ body {
     /*media querie get started button*/
   }
   .intro__container {
-    width: 90%;
+    max-width: 100%;
     height: 35rem;
   }
   .intro__image {
@@ -791,14 +790,14 @@ body {
   }
   /*media querie feature section*/
   .features {
-    width: 375px;
+    max-width: 100%;
     /*media querie feature container*/
     /*media querie feature icon*/
     /*media querie feature subtitle*/
     /*media querie feature description*/
   }
   .features__container {
-    width: 90%;
+    max-width: 100%;
   }
   .features__icon {
     height: 60px;
@@ -811,11 +810,11 @@ body {
   .features__description {
     font-size: 0.9em;
     padding: 0;
-    width: 90%;
+    max-width: 100%;
   }
   /*media querie stay productive section*/
   .stay-productive {
-    width: 375px;
+    max-width: 100%;
     /*media querie stay productive container*/
     /*media querie stay productive image*/
     /*media querie stay productive sub container*/
@@ -824,7 +823,7 @@ body {
     /*media querie stay productive text*/
   }
   .stay-productive__container {
-    width: 90%;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -843,16 +842,16 @@ body {
     width: 90%;
   }
   .stay-productive__sub-container {
-    width: 90%;
+    max-width: 100%;
   }
   .stay-productive__title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 1.2em;
     margin-bottom: 1em;
   }
@@ -867,7 +866,7 @@ body {
   }
   /*media querie testimonials*/
   .testimonials {
-    width: 375px;
+    max-width: 100%;
     margin-top: 5em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -892,7 +891,7 @@ body {
     width: 30px;
   }
   .testimonials__container {
-    width: 90%;
+    max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -974,12 +973,12 @@ body {
   }
   /*media querie footer*/
   .footer {
-    width: 375px;
+    max-width: 100%;
     height: auto;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     /*media querie footer logo image*/
     /*media querie footer container*/
     /*media querie footer sub container*/
@@ -1006,10 +1005,13 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
   }
   .footer__sub-container {
-    width: 375px;
+    max-width: 100%;
     padding: 2em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

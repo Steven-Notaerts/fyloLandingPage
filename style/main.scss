@@ -464,24 +464,24 @@ body {
 }
 
 /*media queries mobile: width = 375px*/
-@media all and(max-width: $mobile-max-width) {
+@media (min-width: $mobile-max-width) and (max-width: 1200px) {
   /*media querie on html*/
   html {
-    max-width: $mobile-max-width;
     overflow-x: hidden;
   }
   /*media querie on body*/
   body {
-    max-width: $mobile-max-width;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
   }
   /*media querie header*/
   .header {
-    width: $mobile-max-width;
+    max-width: 100%;
+
     /*media querie header container*/
     &__container {
-      max-width: $mobile-width;
+      max-width: 100%;
       padding: 1rem;
     }
     /*media querie header logo image*/
@@ -503,16 +503,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: $mobile-max-width;
+    max-width: 100%;
   }
   /*media querie intro*/
   .intro {
-    width: $mobile-max-width;
+    max-width: 100%;
     background-image: url("../assets/image/bg-curvy-mobile.svg");
     background-position: bottom;
     /*media querie intro container*/
     &__container {
-      width: $mobile-width;
+      max-width: 100%;
       height: 35rem;
     }
     /*media querie intro image*/
@@ -537,10 +537,10 @@ body {
   }
   /*media querie feature section*/
   .features {
-    width: $mobile-max-width;
+    max-width: 100%;
     /*media querie feature container*/
     &__container {
-      width: $mobile-width;
+      max-width: 100%;
     }
     /*media querie feature icon*/
     &__icon {
@@ -556,16 +556,16 @@ body {
     &__description {
       font-size: 0.9em;
       padding: 0;
-      width: $mobile-width;
+      max-width: 100%;
     }
   }
 
   /*media querie stay productive section*/
   .stay-productive {
-    width: $mobile-max-width;
+    max-width: 100%;
     /*media querie stay productive container*/
     &__container {
-      width: $mobile-width;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -577,12 +577,12 @@ body {
     }
     /*media querie stay productive sub container*/
     &__sub-container {
-      width: $mobile-width;
+      max-width: 100%;
     }
     /*media querie stay productive sub container title*/
     &__title {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       font-size: 1.2em;
       margin-bottom: 1em;
     }
@@ -602,7 +602,7 @@ body {
 
   /*media querie testimonials*/
   .testimonials {
-    width: $mobile-max-width;
+    max-width: 100%;
     margin-top: 5em;
     display: flex;
     flex-direction: column;
@@ -616,7 +616,7 @@ body {
     }
     /*media querie container*/
     &__container {
-      width: $mobile-width;
+      max-width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -687,9 +687,10 @@ body {
   }
   /*media querie footer*/
   .footer {
-    width: $mobile-max-width;
+    max-width: 100%;
     height: auto;
-    flex-direction: column;
+    flex-direction: row;
+
     /*media querie footer logo image*/
     &__logo-image {
       width: 215px;
@@ -701,12 +702,13 @@ body {
       padding: 10em 0 0 0;
       display: flex;
       flex-direction: column;
-      width: $mobile-width;
+      align-items: center;
+      max-width: 100%;
     }
 
     /*media querie footer sub container*/
     &__sub-container {
-      width: $mobile-max-width;
+      max-width: 100%;
       padding: 2em;
       flex-direction: column;
     }
